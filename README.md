@@ -15,15 +15,15 @@ Interestingly however, the APIs that Skype uses does actually differ slightly fr
 Teams uses endpoints from `https://teams.live.com/api/` for it to function, while Skype uses `https://msgapi.teams.live.com/v1/` for it to function. Having a quick Google of `msgapi.teams.live.com`, yields a post on the Teams Developer Forum from Microsoft, where in May 2023, [a user under the name of JGlowacki, wanted to use the Teams API to access their chats without using the Teams client itself](https://techcommunity.microsoft.com/discussions/teamsdeveloper/how-to-use-microsoft-teams-free-chat-api/3835352), and ended up having to manually find the approprate APIs themselves, which shows that `https://msgapi.teams.live.com/v1/` had been previously used to send messages to other Teams users. Whereas nowadays, Teams currently uses `https://teams.live.com/api/chatsvc/consumer/v1/users/ME/conversations/<the-liveID-of-your-recipient>/messages` to send messages.
 
 Now, the fact that Skype is using part of Teams's APIs is great n all, but it still does require communication or assets from other APIs or CDNs, such as:  
-    - [`skypeassets.com`](skypeassets.com)  
-    - [`pnv.skype.com`](pnv.skype.com)  
-    - [`prod.registrar.skype.com`](prod.registrar.skype.com)  
-    - [`api.asm.skype.com`](api.asm.skype.com)  
-    - [`presence.skype.com`](presence.skype.com)  
-    - [`api.aps.skype.com`](api.aps.skype.com)  
-    - [`avatar.skype.com`](avatar.skype.com)  
-    - [`static-asm.secure.skypeassets.com`](static-asm.secure.skypeassets.com)  
-    - [`channels.skype.com`](channels.skype,com)  
-    - [`options.skype.com`](options.skype.com)  
+    - [`skypeassets.com`](https://skypeassets.com)  
+    - [`pnv.skype.com`](https://pnv.skype.com)  
+    - [`prod.registrar.skype.com`](https://prod.registrar.skype.com)  
+    - [`api.asm.skype.com`](https://api.asm.skype.com)  
+    - [`presence.skype.com`](https://presence.skype.com)  
+    - [`api.aps.skype.com`](https://api.aps.skype.com)  
+    - [`avatar.skype.com`](https://avatar.skype.com)  
+    - [`static-asm.secure.skypeassets.com`](https://static-asm.secure.skypeassets.com)  
+    - [`channels.skype.com`](https://channels.skype,com)  
+    - [`options.skype.com`](https://options.skype.com)  
 
 ..among God knows where else MS has scattered their FQDNs across Skype; this is all the seperate domains needed just to get Skype running in the first place!
